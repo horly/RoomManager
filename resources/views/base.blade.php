@@ -29,10 +29,9 @@
         {{-- Tout nos contenues seront affiché ici --}}
         @yield('content')
 
-        {{--
         @include('global.datatable')
 
         @include('global.sweetalert-message')
-        --}}
+
     </body>
 </html>

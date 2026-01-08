@@ -21,6 +21,13 @@ return Application::configure(basePath: dirname(__DIR__))
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Language::class,
         ]);
+
+        //$middleware->append(Language::class);
+
+        $middleware->alias([
+            'check.license' => \App\Http\Middleware\CheckLicenseExpiration::class,
+            'admin' => \App\Http\Middleware\Admin::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

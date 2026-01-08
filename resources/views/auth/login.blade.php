@@ -13,13 +13,11 @@
           <div>
 
             <div class="mb-5">
-                <a href="/">
-                    <img class="mx-auto d-block" src="assets/images/logo/LOGO-ROOMMANAGER-CUT.png" width="200" alt="logo">
-                </a>
+                @include('global.logo')
             </div>
 
             <div class="login-main">
-              <form class="theme-form" action="#" method="post">
+              <form class="theme-form" action="{{ route('login') }}" method="post">
                 <h2 class="text-center">{{ __('auth.login') }}</h2>
                 <p class="text-center">{{ __('auth.enter_your_email_&_password_to_login') }}</p>
 
